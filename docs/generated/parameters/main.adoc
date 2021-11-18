@@ -1,0 +1,42 @@
+
+.Network Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default value|Description|Availability Zones
+(`AvailabilityZones`)|`**__Requires input__**`|List of Availability Zones to use for the subnets in the VPC. You must use two Availabilty Zones. The Quick Start preserves the logical order you specify.|CIDR to access bastion
+(`BastionAccessCidr`)|`**__Requires input__**`|IP address/range to allow access to bastion host from|Source CIDR for access
+(`SourceCidr`)|`**__Requires input__**`|IP address/range to allow access to web app from
+|===
+.Logging Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default value|Description|AWS Config Recorder Name
+(`ConfigRecorder`)|`**__Blank string__**`|Config Recorder in your AWS Region. Leaving empty will try to create a new recorder.|AWS Config Delivery Channel Name
+(`ConfigDeliveryChannel`)|`**__Blank string__**`|Config Delivery Channel in your AWS Region. Leaving empty will try to create a new recorder. Required if you specify Config Recorder
+|===
+.Server DNS configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default value|Description|Full DNS Name for Web App
+(`AWSPublicFQDN`)|`**__Requires input__**`|Web app will be reachable at this address.|DNS Zone ID
+(`AWSHostedZoneID`)|`**__Requires input__**`|DNS Zone ID to contain the server's DNS entry.|SSL Certificate ARN (Requires matching DNS name)
+(`SSLCertificateARN`)|`**__Blank string__**`|The Amazon Resource Name for the existing SSL cert you wish to use; empty for none. If empty, will create as part of Quick Start
+|===
+.Security Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default value|Description|Database Password
+(`DBPassword`)|`**__Requires input__**`|Mixed alphanumeric and must be between 8 and 28 characters and contain at least one capital letter|Bastion key pair
+(`BastionKeyPairName`)|`**__Requires input__**`|Name of an existing EC2 KeyPair to enable SSH access to Bastion Host|EC2 Key Pair (App)
+(`KeyPairName`)|`**__Requires input__**`|Name of an existing EC2 KeyPair to enable SSH access to app servers
+|===
+.AWS Quick Start Configuration
+[width="100%",cols="16%,11%,73%",options="header",]
+|===
+|Parameter label (name) |Default value|Description|Quick Start S3 Bucket Name
+(`QSS3BucketName`)|`aws-quickstart`|S3 bucket name for the Quick Start assets. Quick Start bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).|Quick Start S3 bucket region
+(`QSS3BucketRegion`)|`us-east-1`|The AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. When using your own bucket, you must specify this value.|Quick Start S3 Key Prefix
+(`QSS3KeyPrefix`)|`quickstart-hitrust-csf/`|S3 key prefix for the Quick Start assets. Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), and forward slash (/).|Quick Start Tag key
+(`QSTagKey`)|`QuickStartID`|Tag key to identify resources from this Quick Start|Quick Start Tag value
+(`QSTagValue`)|`quickstart-hitrust-csf`|Tag value to identify resources from this Quick Start
+|===
