@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<title>Example Product Name on the AWS Cloud</title>
+<title>HITRUST on the AWS Cloud</title>
 <style>
 
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -824,8 +824,12 @@ p.footer-text a{color:#d7d8d8}
 <div id="toc" class="toc2">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#_overview">Overview</a></li>
-<li><a href="#_example_product_name_on_aws">Example Product Name on AWS</a></li>
+<li><a href="#_overview">Overview</a>
+<ul class="sectlevel2">
+<li><a href="#_aws_compliance_architectures">AWS compliance architectures</a></li>
+</ul>
+</li>
+<li><a href="#_hitrust_on_aws">HITRUST on AWS</a></li>
 <li><a href="#_aws_costs">AWS costs</a></li>
 <li><a href="#_software_licenses">Software licenses</a></li>
 <li><a href="#_architecture">Architecture</a></li>
@@ -843,12 +847,7 @@ p.footer-text a{color:#d7d8d8}
 </ul>
 </li>
 <li><a href="#_test_the_deployment">Test the deployment</a></li>
-<li><a href="#_post_deployment_steps">Post-deployment steps</a></li>
-<li><a href="#_best_practices_for_using_example_product_name_on_aws">Best practices for using Example Product Name on AWS</a></li>
-<li><a href="#_security">Security</a></li>
-<li><a href="#_other_useful_information">Other useful information</a></li>
 <li><a href="#_faq">FAQ</a></li>
-<li><a href="#_troubleshooting">Troubleshooting</a></li>
 <li><a href="#_customer_responsibility">Customer responsibility</a></li>
 <li><a href="#_parameter_reference">Parameter reference</a>
 <ul class="sectlevel2">
@@ -865,16 +864,16 @@ p.footer-text a{color:#d7d8d8}
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<h2 id="_example_product_name_on_the_aws_cloud" class="discrete text-center">Example Product Name on the AWS Cloud</h2>
+<h2 id="_hitrust_on_the_aws_cloud" class="discrete text-center">HITRUST on the AWS Cloud</h2>
 <h2 id="_quick_start_reference_deployment" class="discrete text-left text-center">Quick Start Reference Deployment</h2>
 <div class="imageblock text-center">
 <div class="content">
-<img src="https://aws-quickstart.s3.amazonaws.com/quickstart-documentation-base/docs/boilerplate/.images/aws-quickstart-graphic.png" alt="QS" width="80" height="80">
+<img src="https://aws-quickstart.s3.amazonaws.com/quickstart-hitrust-csf/docs/boilerplate/.images/aws-quickstart-graphic.png" alt="QS" width="80" height="80">
 </div>
 </div>
 <div class="paragraph text-center">
-<p><strong>Month of launch or significant update (spelled out) Year</strong><br>
-<em>Toni Jones, AWS Integration &amp; Automation team</em></p>
+<p><strong>January 2022</strong><br>
+<em>AWS Healthcare and AWS Quick Start teams</em></p>
 </div>
 <div class="admonitionblock tip text-left">
 <table>
@@ -883,45 +882,51 @@ p.footer-text a{color:#d7d8d8}
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Visit our <a href="https://github.com/aws-quickstart/quickstart-documentation-base" target="_blank" rel="noopener">GitHub repository</a> for source files and to post feedback,
+Visit our <a href="https://github.com/aws-quickstart/quickstart-hitrust-csf" target="_blank" rel="noopener">GitHub repository</a> for source files and to post feedback,
 report bugs, or submit feature ideas for this Quick Start.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph text-left">
-<p>This Quick Start was created by Example Company Name, Ltd. in collaboration with Amazon Web Services (AWS). <a href="http://aws.amazon.com/quickstart/" target="_blank" rel="noopener">Quick Starts</a> are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices.</p>
+<p>This Quick Start was created by Amazon Web Services (AWS). <a href="http://aws.amazon.com/quickstart/" target="_blank" rel="noopener">Quick Starts</a> are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_overview">Overview</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_aws_compliance_architectures">AWS compliance architectures</h3>
 <div class="paragraph">
-<p>This guide provides instructions for deploying the Example Product Name Quick Start reference architecture on the AWS Cloud.</p>
+<p>AWS compliance solutions help streamline, automate, and implement secure baselines in AWS—from initial design to operational security readiness. They incorporate the expertise of AWS solutions architects and security and compliance personnel to help you easily build a secure and reliable architecture through automation.</p>
 </div>
 <div class="paragraph">
-<p>This Quick Start is for users who &lt;target audience and usage scenario&gt;</p>
+<p>This Quick Start includes AWS CloudFormation templates to automate building a baseline architecture that fits within your organization’s larger Health Information Trust Alliance Common Security Framework (HITRUST-CSF) program. It also includes a <a href="https://go.hitrustalliance.net/SR-Custom-Matrix-AWS">HITRUST CSF security controls mapping</a>, which maps HITRUST controls to architecture decisions, features, and configuration of the baseline.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Amazon may share user-deployment information with the AWS Partner that collaborated with AWS on the Quick Start.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>This Quick Start is for health IT infrastructure architects, administrators, compliance professionals, and DevOps professionals who are planning to implement or extend their HITRUST workloads to the AWS Cloud.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_example_product_name_on_aws">Example Product Name on AWS</h2>
+<h2 id="_hitrust_on_aws">HITRUST on AWS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>&lt;Describe how the software works on AWS.&gt;</p>
+<p>The HITRUST CSF (Health Information Trust Alliance Common Security Framework) is a security framework that incorporates and leverages security requirements in existing frameworks, originating from global entities (GDPR ISO), US federal (e.g., FFIEC, HIPAA and HITECH), state, third party (e.g., PCI and COBIT), and other US government agencies (e.g., NIST, FTC, and CMS).</p>
+</div>
+<div class="paragraph">
+<p>HITRUST has developed the HITRUST CSF Assurance Program, which encompasses the common requirements, methodology, and tools that enable both an organization and its business partners to take a consistent and incremental approach to managing compliance. Further, it allows business partners and vendors to assess and report against multiple sets of requirements.</p>
+</div>
+<div class="paragraph">
+<p>Security and Compliance is a shared responsibility between AWS and the customer. This shared responsibility model can help lessen the customer’s operational burden as AWS operates, manages and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates. AWS customers can design and implement an AWS environment, and use AWS services in a manner that supports satisfying the requirements of HITRUST CSF. Customers can also leverage certain controls established under the HITRUST CSF validated assessment of AWS services.</p>
+</div>
+<div class="paragraph">
+<p>AWS services have been assessed under the HITRUST CSF Assurance Program by an approved HITRUST CSF Assessor to meet HITRUST CSF v9.1 Certification Criteria. The HITRUST CSF certification of AWS is valid for two years, and can be accessed at <a href="https://console.aws.amazon.com/artifact/" class="bare">https://console.aws.amazon.com/artifact/</a>.</p>
+</div>
+<div class="paragraph">
+<p>AWS customers can design and implement an AWS environment, and use AWS services to help them meet the requirements of the HITRUST CSF.  Customers may look to leverage the AWS HITRUST CSF certification to support their own HITRUST CSF certification. See AWS HITRUST CSF Certification at <a href="https://console.aws.amazon.com/artifact/" class="bare">https://console.aws.amazon.com/artifact/</a>. AWS provides additional workbooks, whitepapers, and best practice guides on our <a href="https://aws.amazon.com/compliance/resources/">AWS Compliance Resources page</a>.</p>
 </div>
 </div>
 </div>
@@ -956,19 +961,7 @@ After you deploy the Quick Start, create <a href="https://docs.aws.amazon.com/aw
 <h2 id="_software_licenses">Software licenses</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>&lt;Example 1&gt;No licenses are required to deploy this Quick Start. All AWS service resources consumed during the launch of the Quick Start incur AWS service usage costs.</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;Example 2&gt;Some configurations of the Example Product Name Quick Start involve the use of third-party software. You are responsible for obtaining a license directly from the software vendor.</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;Example 3&gt;This Quick Start requires a license for Example Product Name. To use the Quick Start in your production environment, sign up for a license at &lt;link&gt;. When you launch the Quick Start, place the license key in an S3 bucket and specify its location.</em></p>
-</div>
-<div class="paragraph">
-<p><em>If you don’t have a license, the Quick Start deploys with a trial license. The trial license gives you &lt;n&gt; days of free usage in a non-production environment. After this time, you can upgrade to a production license by following the instructions at &lt;link&gt;.</em></p>
-</div>
-<div class="paragraph">
-<p><em>&lt;AMI information&gt;The Quick Start requires a subscription to the Amazon Machine Image (AMI) for Example Product Name, which is available from <a href="https://aws.amazon.com/marketplace/" target="_blank" rel="noopener">AWS Marketplace</a>. Additional pricing, terms, and conditions may apply. For instructions, see <a href="#step-2.-subscribe-to-the-software-ami">step 2</a> in the deployment section.</em></p>
+<p>There are no additional license requirements to use this Quick Start.</p>
 </div>
 </div>
 </div>
@@ -976,15 +969,13 @@ After you deploy the Quick Start, create <a href="https://docs.aws.amazon.com/aw
 <h2 id="_architecture">Architecture</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Deploying this Quick Start for a new virtual private cloud (VPC) with
-default parameters builds the following Example Product Name environment in the
-AWS Cloud.</p>
+<p>Deploying this Quick Start with default parameters builds the following HITRUST environment in the AWS Cloud.</p>
 </div>
 <div id="architecture1" class="imageblock">
 <div class="content">
 <img src="images/architecture_diagram.png" alt="Architecture">
 </div>
-<div class="title">Figure 1. Quick Start architecture for Example Product Name on AWS</div>
+<div class="title">Figure 1. Quick Start architecture for HITRUST on AWS</div>
 </div>
 <div class="paragraph">
 <p>As shown in <a href="#architecture1">Figure 1</a>, the Quick Start sets up the following:</p>
@@ -992,47 +983,56 @@ AWS Cloud.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>A highly available architecture that spans two Availability Zones.*</p>
+<p>A highly available architecture that spans two Availability Zones.</p>
 </li>
 <li>
-<p>A VPC configured with public and private subnets, according to AWS
-best practices, to provide you with your own virtual network on AWS.*</p>
+<p>A management VPC and production VPC configured with public and private subnets according to AWS best practices, to provide you with your own virtual network on AWS. The management and production VPCs have VPC peering enabled.</p>
 </li>
 <li>
 <p>In the public subnets:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed network address translation (NAT) gateways to allow outbound
-internet access for resources in the private subnets.*</p>
+<p>Managed network address translation (NAT) gateways to allow outbound internet access for resources in the private subnets.</p>
 </li>
 <li>
-<p>A Linux bastion host in an Auto Scaling group to allow inbound Secure
-Shell (SSH) access to EC2 instances in public and private subnets.*</p>
+<p>In the management VPC, a Linux bastion host in an Auto Scaling group to allow inbound Secure Shell (SSH) access to Amazon Elastic Compute Cloud (Amazon EC2) instances in private subnets.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>In the private subnets:</p>
+<p>Standard Amazon Virtual Private Cloud (Amazon VPC) security groups for EC2 instances and load balancers used in the sample application stack. The security groups limit access to only necessary services and disallow unencrypted traffic (e.g., HTTP port 80).</p>
+</li>
+<li>
+<p>An Amazon Simple Storage Service (Amazon S3) bucket for encrypted log content.</p>
+</li>
+<li>
+<p>In the private subnets in the production VPC:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>&lt;item&gt;.</p>
+<p>An encrypted Multi-AZ Amazon Relational Database Service (Amazon RDS) MySQL database and a standby instance in a second private subnet.</p>
 </li>
 <li>
-<p>&lt;item&gt;.</p>
+<p>A three-tier Linux web application in an Auto Scaling group and an Application Load Balancer, which can be modified or bootstrapped with customer applications, such as WordPress.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>&lt;describe any additional components&gt;.</p>
+<p>A Secure Sockets Layer (SSL) certificate managed by AWS Certificate Manager (ACM) on the load balancer to encrypt all traffic between the internet and the load balancer. Separate self-signed certificates are generated on the EC2 instances to encrypt traffic between the load balancer and the application instances.</p>
+</li>
+<li>
+<p>AWS Config rules to monitor the deployment configuration. If you haven’t created a configuration recorder and delivery channel, the Quick Start will create those also.</p>
+</li>
+<li>
+<p>An Amazon Route 53 record set that maps the fully qualified domain name (FQDN) to the load balancer Domain Name System (DNS).</p>
+</li>
+<li>
+<p>Logging, monitoring, and alerts using AWS CloudTrail, Amazon CloudWatch, and AWS Config rules</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p><span class="small">* The template that deploys the Quick Start into an existing VPC skips the components marked by asterisks and prompts you for your existing VPC configuration.</span></p>
 </div>
 </div>
 </div>
@@ -1048,7 +1048,10 @@ and <a href="https://aws.amazon.com/training/" target="_blank" rel="noopener">AW
 deploy, and operate your infrastructure and applications on the AWS Cloud.</p>
 </div>
 <div class="paragraph">
-<p>This Quick Start also assumes familiarity with &lt;knowledge expectations specific to this Quick Start&gt;.</p>
+<p>This deployment requires a moderate level of familiarity with AWS services. If you’re new to AWS, visit the <a href="https://aws.amazon.com/getting-started/">Getting Started Resource Center</a> and the <a href="https://aws.amazon.com/training/">AWS Training and Certification website</a> for materials and programs that can help you develop the skills to design, deploy, and operate your infrastructure and applications on the AWS Cloud.</p>
+</div>
+<div class="paragraph">
+<p>For information about HITRUST on AWS, see the <a href="https://aws.amazon.com/compliance/hitrust/">HITRUST certification page</a> on the AWS website.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1084,35 +1087,39 @@ deploy, and operate your infrastructure and applications on the AWS Cloud.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VPCs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Elastic IP addresses</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Security groups</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AWS Identity and Access Management (IAM) roles</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Auto Scaling groups</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Application Load Balancers</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Network Load Balancers</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amazon S3 buckets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;type&gt; instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">t3.small instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EC2 key pairs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 </tr>
 </tbody>
 </table>
@@ -1161,30 +1168,16 @@ Certain Regions are available on an opt-in basis. For more information, see <a h
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Deploy Example Product Name into a new VPC</strong>. This option builds a new AWS environment consisting of the VPC, subnets, NAT gateways, security groups, bastion hosts, and other infrastructure components. It then deploys Example Product Name into this new VPC.</p>
-</li>
-<li>
-<p><strong>Deploy Example Product Name into an existing VPC</strong>. This option provisions Example Product Name in your existing AWS infrastructure.</p>
+<p><strong>Deploy HITRUST into new VPCs</strong>. This option builds a new AWS environment consisting of the VPCs, subnets, NAT gateways, security groups, bastion hosts, and other infrastructure components. It then deploys an example WordPress site into the new production VPC.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>The Quick Start provides separate templates for these options. It also lets you configure Classless Inter-Domain Routing (CIDR) blocks, instance types, and Example Product Name settings, as discussed later in this guide.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_prepare_your_aws_account">Prepare your AWS account</h4>
 <div class="paragraph">
-<p>Verify that your AWS account has the permissions required to create the resources listed in the <a href="#_resource_quotas">Resource quotas</a> section of this guide.</p>
+<p>To deploy the Quick Start, you will need to have a domain name that you own and is managed by Route 53.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_prepare_your_example_company_name_ltd_account">Prepare your Example Company Name, Ltd. account</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_prepare_for_the_deployment">Prepare for the deployment</h4>
-
 </div>
 </div>
 </div>
@@ -1214,13 +1207,13 @@ Certain Regions are available on an opt-in basis. For more information, see <a h
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-If you deploy Example Product Name into an existing VPC, ensure that your VPC has two private subnets in different Availability Zones for the workload instances and that the subnets are not shared. This Quick Start does not support <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html" target="_blank" rel="noopener">shared subnets</a>. The subnets require <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html" target="_blank" rel="noopener">NAT gateways</a> in their route tables to allow the instances to download packages and software without exposing the instances to the internet. Also ensure that the domain name in the DHCP options is configured, as explained in <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html" target="_blank" rel="noopener">DHCP options sets</a>. Provide your VPC settings when you launch the Quick Start.
+If you deploy HITRUST into an existing VPC, ensure that your VPC has two private subnets in different Availability Zones for the workload instances and that the subnets are not shared. This Quick Start does not support <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html" target="_blank" rel="noopener">shared subnets</a>. The subnets require <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html" target="_blank" rel="noopener">NAT gateways</a> in their route tables to allow the instances to download packages and software without exposing the instances to the internet. Also ensure that the domain name in the DHCP options is configured, as explained in <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html" target="_blank" rel="noopener">DHCP options sets</a>. Provide your VPC settings when you launch the Quick Start.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Each deployment takes about 15 minutes / 60 minutes / 1.5 hours to complete.</p>
+<p>Each deployment takes about 30 minutes to complete.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1233,12 +1226,8 @@ If you deploy Example Product Name into an existing VPC, ensure that your VPC ha
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="http://qs_launch_permalink" target="_blank" rel="noopener">Deploy Example Product Name into a new VPC on AWS</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="http://qs_template_permalink" target="_blank" rel="noopener">View template</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="http://qs_launch_permalink" target="_blank" rel="noopener">Deploy Example Product Name into an existing VPC on AWS</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="http://qs_template_permalink" target="_blank" rel="noopener">View template</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://fwd.aws/n4MQ9" target="_blank" rel="noopener">Deploy HITRUST into new VPCs on AWS</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/aws-quickstart/quickstart-hitrust-csf" target="_blank" rel="noopener">View templates</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1262,7 +1251,7 @@ If you deploy Example Product Name into an existing VPC, ensure that your VPC ha
 <p>Choose <strong>Create stack</strong> to deploy the stack.</p>
 </li>
 <li>
-<p>Monitor the status of the stack. When the status is <strong>CREATE_COMPLETE</strong>, the Example Product Name deployment is ready.</p>
+<p>Monitor the status of the stack. When the status is <strong>CREATE_COMPLETE</strong>, the HITRUST deployment is ready.</p>
 </li>
 <li>
 <p>To view the created resources, see the values displayed in the <strong>Outputs</strong> tab for the stack.</p>
@@ -1275,36 +1264,47 @@ If you deploy Example Product Name into an existing VPC, ensure that your VPC ha
 <div class="sect1">
 <h2 id="_test_the_deployment">Test the deployment</h2>
 <div class="sectionbody">
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the landing page. In the <strong>Outputs</strong> tab shown in the previous figure, select LandingPageURL. If you click on the link, the following webpage appears.</p>
+</li>
+</ol>
 </div>
+<div id="test1" class="imageblock">
+<div class="content">
+<img src="images/image1.png" alt="test1">
 </div>
-<div class="sect1">
-<h2 id="_post_deployment_steps">Post-deployment steps</h2>
-<div class="sectionbody">
-
+<div class="title">Figure 2. Confirmation on webpage after successful launch</div>
 </div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Next, confirm that WordPress is installed correctly. Note down the application URL and navigate to ApplicationURL/wordpress/. Enter the requisite information, if you choose to set up the site.</p>
+</li>
+<li>
+<p>Navigate to the AWS Config console. Here, you can see the status of your configuration. Note that AWS Config will monitor all resources in the AWS Region you deploy in, not just what is in this particular Quick Start. For example, an Amazon Elastic Block Store (Amazon EBS) volume may not be encrypted elsewhere.</p>
+</li>
+</ol>
 </div>
-<div class="sect1">
-<h2 id="_best_practices_for_using_example_product_name_on_aws">Best practices for using Example Product Name on AWS</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>Add any best practices for using the software.</em></p>
+<div id="test2" class="imageblock">
+<div class="content">
+<img src="images/image2.png" alt="test2">
 </div>
+<div class="title">Figure 3. Resource monitoring</div>
 </div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>You can also check that all your S3 buckets have public read access disabled.</p>
+</li>
+</ol>
 </div>
-<div class="sect1">
-<h2 id="_security">Security</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>Add any security-related information.</em></p>
+<div id="test3" class="imageblock">
+<div class="content">
+<img src="images/image3.png" alt="test3">
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_other_useful_information">Other useful information</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>Add any other details that will help the customer use the software on AWS.</em></p>
+<div class="title">Figure 4. S3 buckets with public read access disabled</div>
 </div>
 </div>
 </div>
@@ -1339,13 +1339,37 @@ When you set <strong>Rollback on failure</strong> to <strong>Disabled</strong>, 
 <div class="paragraph">
 <p><strong>A.</strong> Launch the Quick Start templates from the links in this guide or from another S3 bucket. If you deploy the templates from a local copy on your computer or from a location other than an S3 bucket, you might encounter template-size limitations. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html" target="_blank" rel="noopener">AWS CloudFormation quotas</a>.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_troubleshooting">Troubleshooting</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>&lt;Steps for troubleshooting the deployment.&gt;</p>
+<p><strong>Q.</strong> The DNS validation for the SSL certificate times out.</p>
+</div>
+<div class="paragraph">
+<p><strong>A.</strong> You might encounter this issue if your DNS provider is not Route 53. In this case, you must add DNS records to your DNS registrar for the routing to work. For more information, see the following pages in the AWS documentation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">Use DNS to Validate Domain Ownership</a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/acm/latest/userguide/how-domain-validation-works.html">How Domain Validation Works</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Q.</strong> The DNS validation appears to have completed successfully, but the Quick Start errors out during the ACM certificate DNS step.</p>
+</div>
+<div class="paragraph">
+<p><strong>A.</strong> If you run into this issue:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you already have a wildcard ACM certificate in the AWS Region where you deployed the Quick Start, you can skip the ACM certificate DNS step by supplying the ARN of your pre-existing certificate in the SSLCertificateARN parameter. You can also import certificates in the ACM console and use the ARN of your uploaded certificate.</p>
+</li>
+<li>
+<p>Alternatively, make sure that DNS validation is working by provisioning certificates outside the Quick Start, following the instructions in the links provided for the previous Q&amp;A. You can use the certificate you created in the SSLCertificateARN parameter to skip the ACM certificate DNS step.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1562,7 +1586,7 @@ Unless you are customizing the Quick Start templates for your own deployment pro
 <h2 id="_send_us_feedback">Send us feedback</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To post feedback, submit feature ideas, or report bugs, use the <strong>Issues</strong> section of the <a href="https://github.com/aws-quickstart/quickstart-documentation-base" target="_blank" rel="noopener">GitHub repository</a> for this Quick Start. To submit code, see the <a href="https://aws-quickstart.github.io/" target="_blank" rel="noopener">Quick Start Contributor’s Guide</a>.</p>
+<p>To post feedback, submit feature ideas, or report bugs, use the <strong>Issues</strong> section of the <a href="https://github.com/aws-quickstart/quickstart-hitrust-csf" target="_blank" rel="noopener">GitHub repository</a> for this Quick Start. To submit code, see the <a href="https://aws-quickstart.github.io/" target="_blank" rel="noopener">Quick Start Contributor’s Guide</a>.</p>
 </div>
 </div>
 </div>
@@ -1578,7 +1602,7 @@ Unless you are customizing the Quick Start templates for your own deployment pro
 <h2 id="_github_repository">GitHub repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Visit our <a href="https://github.com/aws-quickstart/quickstart-documentation-base" target="_blank" rel="noopener">GitHub repository</a> to download
+<p>Visit our <a href="https://github.com/aws-quickstart/quickstart-hitrust-csf" target="_blank" rel="noopener">GitHub repository</a> to download
 the templates and scripts for this Quick Start, to post your comments,
 and to share your customizations with others.</p>
 </div>
@@ -1600,13 +1624,13 @@ and to share your customizations with others.</p>
 <p class="footer-text">
 <!-- We can use document attributes: -->
 <!-- Generated with Asciidoctor v2.0.16. -->
-<a href="https://aws.amazon.com/privacy/">Privacy</a> | <a href="https://aws.amazon.com/terms/">Site terms</a> | &copy; 2021, Amazon Web Services, Inc. or its affiliates and Example Company Name, Ltd.. All rights reserved.
+<a href="https://aws.amazon.com/privacy/">Privacy</a> | <a href="https://aws.amazon.com/terms/">Site terms</a> | &copy; 2021, Amazon Web Services, Inc. or its affiliates. All rights reserved.
 </p>
 </body>
 </html>
 <!--
 repo commit:
-c25e07a85d06260f5f364b1a43611ce0049bb0fd
+094b337767e58c6fbee6434ef57d64bab3675797
 
 submodule config:
  eea042d0b9c005d2549a71349e5f28b02c81af75 docs/boilerplate (heads/main)
