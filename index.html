@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.16">
+<meta name="generator" content="Asciidoctor 2.0.17">
 <title>HITRUST on the AWS Cloud</title>
 <style>
 
@@ -849,11 +849,6 @@ p.footer-text a{color:#d7d8d8}
 <li><a href="#_test_the_deployment">Test the deployment</a></li>
 <li><a href="#_faq">FAQ</a></li>
 <li><a href="#_customer_responsibility">Customer responsibility</a></li>
-<li><a href="#_parameter_reference">Parameter reference</a>
-<ul class="sectlevel2">
-<li><a href="#_parameters_for_deploying_into_new_vpcs">Parameters for deploying into new VPCs</a></li>
-</ul>
-</li>
 <li><a href="#_send_us_feedback">Send us feedback</a></li>
 <li><a href="#_quick_start_reference_deployments">Quick Start reference deployments</a></li>
 <li><a href="#_github_repository">GitHub repository</a></li>
@@ -873,7 +868,7 @@ p.footer-text a{color:#d7d8d8}
 </div>
 <div class="paragraph text-center">
 <p><strong>January 2022</strong><br>
-<em>AWS Healthcare and AWS Quick Start teams</em></p>
+<em>AWS Healthcare and AWS Infrastructure &amp; Automation teams</em></p>
 </div>
 <div class="admonitionblock tip text-left">
 <table>
@@ -899,13 +894,13 @@ report bugs, or submit feature ideas for this Quick Start.
 <div class="sect2">
 <h3 id="_aws_compliance_architectures">AWS compliance architectures</h3>
 <div class="paragraph">
-<p>AWS compliance solutions help streamline, automate, and implement secure baselines in AWS—from initial design to operational security readiness. They incorporate the expertise of AWS solutions architects and security and compliance personnel to help you easily build a secure and reliable architecture through automation.</p>
+<p>AWS compliance solutions help streamline, automate, and implement secure baselines in AWS, from initial design to operational security readiness. They incorporate the expertise of AWS solutions architects and security and compliance personnel to help you  build an automated architecture.</p>
 </div>
 <div class="paragraph">
-<p>This Quick Start includes AWS CloudFormation templates to automate building a baseline architecture that fits within your organization’s larger Health Information Trust Alliance Common Security Framework (HITRUST-CSF) program. It also includes a <a href="https://go.hitrustalliance.net/SR-Custom-Matrix-AWS">HITRUST CSF security controls mapping</a>, which maps HITRUST controls to architecture decisions, features, and configuration of the baseline.</p>
+<p>This Quick Start includes AWS CloudFormation templates to automate building a baseline architecture that fits within your organization’s larger Health Information Trust Alliance Common Security Framework (HITRUST-CSF) program. It also includes <a href="https://go.hitrustalliance.net/SR-Custom-Matrix-AWS" target="_blank" rel="noopener">HITRUST CSF security controls mapping</a>, which maps HITRUST controls to architecture decisions, features, and the baseline configuration.</p>
 </div>
 <div class="paragraph">
-<p>This Quick Start is for health IT infrastructure architects, administrators, compliance professionals, and DevOps professionals who are planning to implement or extend their HITRUST workloads to the AWS Cloud.</p>
+<p>This deployment is for health IT infrastructure architects, administrators, compliance professionals, and DevOps professionals who want to implement or extend HITRUST workloads to the AWS Cloud.</p>
 </div>
 </div>
 </div>
@@ -914,19 +909,50 @@ report bugs, or submit feature ideas for this Quick Start.
 <h2 id="_hitrust_on_aws">HITRUST on AWS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The HITRUST CSF (Health Information Trust Alliance Common Security Framework) is a security framework that incorporates and leverages security requirements in existing frameworks, originating from global entities (GDPR ISO), US federal (e.g., FFIEC, HIPAA and HITECH), state, third party (e.g., PCI and COBIT), and other US government agencies (e.g., NIST, FTC, and CMS).</p>
+<p>HITRUST CSF (Health Information Trust Alliance Common Security Framework) is a security framework that incorporates security requirements into existing frameworks that originate from global entities, such as the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>General Data Protection Regulation (GDPR)</p>
+</li>
+<li>
+<p>International Organization for Standardization (ISO)</p>
+</li>
+<li>
+<p>Federal Financial Institutions Examination Council (FFIEC)</p>
+</li>
+<li>
+<p>Health Insurance Portability and Accountability Act (HIPAA)</p>
+</li>
+<li>
+<p>Health Information Technology for Economic and Clinical Health Act (HITECH)</p>
+</li>
+<li>
+<p>Projects of Common Interest (PCI)</p>
+</li>
+<li>
+<p>Control Objectives for Information and Related Technologies (COBIT)</p>
+</li>
+<li>
+<p>National Institute of Standards and Technology (NIST)</p>
+</li>
+<li>
+<p>Fair Trade Commission (FTC)</p>
+</li>
+<li>
+<p>Centers for Medicare and Medicaid Services (CMS)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>HITRUST has developed the HITRUST CSF Assurance Program, which encompasses the common requirements, methodology, and tools that enable both an organization and its business partners to take a consistent and incremental approach to managing compliance. Further, it allows business partners and vendors to assess and report against multiple sets of requirements.</p>
+<p>HITRUST developed the CSF Assurance Program, which comprises the requirements, methods, and tools that let organizations incrementally manage their compliance requirements. It also allows business partnerships and vendors to assess and report against multiple sets of requirements.</p>
 </div>
 <div class="paragraph">
-<p>Security and Compliance is a shared responsibility between AWS and the customer. This shared responsibility model can help lessen the customer’s operational burden as AWS operates, manages and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates. AWS customers can design and implement an AWS environment, and use AWS services in a manner that supports satisfying the requirements of HITRUST CSF. Customers can also leverage certain controls established under the HITRUST CSF validated assessment of AWS services.</p>
+<p>Security and Compliance is a shared responsibility between AWS and its customers. This shared responsibility model can help lessen the customer’s operational burden as AWS operates, manages, and controls the OS components and virtualization layer down to the physical security of the facilities in which the service operates. AWS customers can design and implement an AWS environment and use AWS services in a manner that satisfies HITRUST CSF requirements. Customers can also use certain controls established under the HITRUST CSF validated assessment of AWS services.</p>
 </div>
 <div class="paragraph">
-<p>AWS services have been assessed under the HITRUST CSF Assurance Program by an approved HITRUST CSF Assessor to meet HITRUST CSF v9.1 Certification Criteria. The HITRUST CSF certification of AWS is valid for two years, and can be accessed at <a href="https://console.aws.amazon.com/artifact/" class="bare">https://console.aws.amazon.com/artifact/</a>.</p>
-</div>
-<div class="paragraph">
-<p>AWS customers can design and implement an AWS environment, and use AWS services to help them meet the requirements of the HITRUST CSF.  Customers may look to leverage the AWS HITRUST CSF certification to support their own HITRUST CSF certification. See AWS HITRUST CSF Certification at <a href="https://console.aws.amazon.com/artifact/" class="bare">https://console.aws.amazon.com/artifact/</a>. AWS provides additional workbooks, whitepapers, and best practice guides on our <a href="https://aws.amazon.com/compliance/resources/">AWS Compliance Resources page</a>.</p>
+<p>AWS services have been assessed under the HITRUST CSF Assurance Program by an approved HITRUST CSF assessor to meet HITRUST CSF v9.1 certification criteria. The HITRUST CSF certification of AWS is valid for two years and can be accessed at <a href="https://console.aws.amazon.com/artifact/" target="_blank" rel="noopener">https://console.aws.amazon.com/artifact/</a>. For more information, see <a href="https://aws.amazon.com/compliance/resources/" target="_blank" rel="noopener">Compliance Resources</a>.</p>
 </div>
 </div>
 </div>
@@ -986,7 +1012,7 @@ After you deploy the Quick Start, create <a href="https://docs.aws.amazon.com/aw
 <p>A highly available architecture that spans two Availability Zones.</p>
 </li>
 <li>
-<p>A management VPC and production VPC configured with public and private subnets according to AWS best practices, to provide you with your own virtual network on AWS. The management and production VPCs have VPC peering enabled.</p>
+<p>A management VPC and production VPC configured with public and private subnets, according to AWS best practices, to provide you with your own virtual network on AWS. The management and production VPCs have VPC peering enabled.</p>
 </li>
 <li>
 <p>In the public subnets:</p>
@@ -996,13 +1022,13 @@ After you deploy the Quick Start, create <a href="https://docs.aws.amazon.com/aw
 <p>Managed network address translation (NAT) gateways to allow outbound internet access for resources in the private subnets.</p>
 </li>
 <li>
-<p>In the management VPC, a Linux bastion host in an Auto Scaling group to allow inbound Secure Shell (SSH) access to Amazon Elastic Compute Cloud (Amazon EC2) instances in private subnets.</p>
+<p>In the management VPC, a Linux bastion host in an Auto Scaling group to allow inbound Secure Shell (SSH) access to Amazon Elastic Compute Cloud (Amazon EC2) instances in the private subnets.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Standard Amazon Virtual Private Cloud (Amazon VPC) security groups for EC2 instances and load balancers used in the sample application stack. The security groups limit access to only necessary services and disallow unencrypted traffic (e.g., HTTP port 80).</p>
+<p>Security groups for Amazon EC2 instances and load balancers, used in the sample application stack. The security groups limit access to only necessary services and disallow unencrypted traffic (for example, HTTP port 80).</p>
 </li>
 <li>
 <p>An Amazon Simple Storage Service (Amazon S3) bucket for encrypted log content.</p>
@@ -1021,16 +1047,16 @@ After you deploy the Quick Start, create <a href="https://docs.aws.amazon.com/aw
 </div>
 </li>
 <li>
-<p>A Secure Sockets Layer (SSL) certificate managed by AWS Certificate Manager (ACM) on the load balancer to encrypt all traffic between the internet and the load balancer. Separate self-signed certificates are generated on the EC2 instances to encrypt traffic between the load balancer and the application instances.</p>
+<p>A Secure Sockets Layer (SSL) certificate, managed by AWS Certificate Manager (ACM), on the load balancer to encrypt all traffic between the internet and load balancer. Separate self-signed certificates are generated on the Amazon EC2 instances to encrypt traffic between the load balancer and application instances.</p>
 </li>
 <li>
-<p>AWS Config rules to monitor the deployment configuration. If you haven’t created a configuration recorder and delivery channel, the Quick Start will create those also.</p>
+<p>AWS Config rules to monitor the deployment configuration. If you haven’t created a configuration recorder and delivery channel, this deployment creates them.</p>
 </li>
 <li>
 <p>An Amazon Route 53 record set that maps the fully qualified domain name (FQDN) to the load balancer Domain Name System (DNS).</p>
 </li>
 <li>
-<p>Logging, monitoring, and alerts using AWS CloudTrail, Amazon CloudWatch, and AWS Config rules</p>
+<p>Logging, monitoring, and alerts using AWS CloudTrail, Amazon CloudWatch, and AWS Config rules.</p>
 </li>
 </ul>
 </div>
@@ -1048,10 +1074,10 @@ and <a href="https://aws.amazon.com/training/" target="_blank" rel="noopener">AW
 deploy, and operate your infrastructure and applications on the AWS Cloud.</p>
 </div>
 <div class="paragraph">
-<p>This deployment requires a moderate level of familiarity with AWS services. If you’re new to AWS, visit the <a href="https://aws.amazon.com/getting-started/">Getting Started Resource Center</a> and the <a href="https://aws.amazon.com/training/">AWS Training and Certification website</a> for materials and programs that can help you develop the skills to design, deploy, and operate your infrastructure and applications on the AWS Cloud.</p>
+<p>This deployment requires a moderate level of familiarity with AWS services. If you’re new to AWS, see <a href="https://aws.amazon.com/getting-started/" target="_blank" rel="noopener">Getting Started with AWS</a> and <a href="https://aws.amazon.com/training/" target="_blank" rel="noopener">Training and Certification</a>.</p>
 </div>
 <div class="paragraph">
-<p>For information about HITRUST on AWS, see the <a href="https://aws.amazon.com/compliance/hitrust/">HITRUST certification page</a> on the AWS website.</p>
+<p>For information about HITRUST on AWS, see <a href="https://aws.amazon.com/compliance/hitrust/" target="_blank" rel="noopener">HITRUST CSF</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1115,7 +1141,7 @@ deploy, and operate your infrastructure and applications on the AWS Cloud.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">t3.small instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3-5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3–5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EC2 key pairs</p></td>
@@ -1163,12 +1189,12 @@ Certain Regions are available on an opt-in basis. For more information, see <a h
 <div class="sect3">
 <h4 id="_deployment_options">Deployment options</h4>
 <div class="paragraph">
-<p>This Quick Start provides two deployment options:</p>
+<p>This Quick Start provides the following deployment option:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Deploy HITRUST into new VPCs</strong>. This option builds a new AWS environment consisting of the VPCs, subnets, NAT gateways, security groups, bastion hosts, and other infrastructure components. It then deploys an example WordPress site into the new production VPC.</p>
+<p><strong>Deploy HITRUST into new VPCs</strong>. This builds a new AWS environment consisting of the VPCs, subnets, NAT gateways, security groups, bastion hosts, and other infrastructure components. It then deploys an example WordPress site into a new production VPC.</p>
 </li>
 </ul>
 </div>
@@ -1176,7 +1202,7 @@ Certain Regions are available on an opt-in basis. For more information, see <a h
 <div class="sect3">
 <h4 id="_prepare_your_aws_account">Prepare your AWS account</h4>
 <div class="paragraph">
-<p>To deploy the Quick Start, you will need to have a domain name that you own and is managed by Route 53.</p>
+<p>To deploy this Quick Start, you must have your own domain name, and it must be managed by Amazon Route 53.</p>
 </div>
 </div>
 </div>
@@ -1190,7 +1216,7 @@ Certain Regions are available on an opt-in basis. For more information, see <a h
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Sign in to your AWS account at <a href="https://aws.amazon.com" class="bare">https://aws.amazon.com</a> with an IAM user role that has the necessary permissions. For details, see <a href="#_planning_the_deployment">Planning the deployment</a> earlier in this guide.</p>
+<p>Sign in to your AWS account at <a href="https://aws.amazon.com" class="bare">https://aws.amazon.com</a> with an IAM user role that has the necessary permissions. For more information, see <a href="#_planning_the_deployment">Planning the deployment</a>, earlier in this guide.</p>
 </li>
 <li>
 <p>Ensure that your AWS account is configured correctly, as discussed in the <a href="#_technical_requirements">Technical requirements</a> section.</p>
@@ -1207,7 +1233,7 @@ Certain Regions are available on an opt-in basis. For more information, see <a h
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-If you deploy HITRUST into an existing VPC, ensure that your VPC has two private subnets in different Availability Zones for the workload instances and that the subnets are not shared. This Quick Start does not support <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html" target="_blank" rel="noopener">shared subnets</a>. The subnets require <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html" target="_blank" rel="noopener">NAT gateways</a> in their route tables to allow the instances to download packages and software without exposing the instances to the internet. Also ensure that the domain name in the DHCP options is configured, as explained in <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html" target="_blank" rel="noopener">DHCP options sets</a>. Provide your VPC settings when you launch the Quick Start.
+If you deploy HITRUST into an existing VPC, ensure that your VPC has two private subnets in different Availability Zones for the workload instances and that the subnets are not shared. This Quick Start does not support <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html" target="_blank" rel="noopener">shared subnets</a>. The subnets require <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html" target="_blank" rel="noopener">NAT gateways</a> in their route tables to allow instances to download packages and software without exposing the instances to the internet. Also ensure that the domain name in the DHCP options is configured, as explained in <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html" target="_blank" rel="noopener">DHCP options sets</a>. Provide your VPC settings when you launch the Quick Start.
 </td>
 </tr>
 </table>
@@ -1218,7 +1244,7 @@ If you deploy HITRUST into an existing VPC, ensure that your VPC has two private
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Sign in to your AWS account, and choose one of the following options to launch the AWS CloudFormation template. For help with choosing an option, see <a href="#_deployment_options">Deployment options</a> earlier in this guide.</p>
+<p>Sign in to your AWS account, and choose one of the following options to launch the AWS CloudFormation template. For help with choosing an option, see <a href="#_deployment_options">Deployment options</a>, earlier in this guide.</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 75%;">
@@ -1226,20 +1252,20 @@ If you deploy HITRUST into an existing VPC, ensure that your VPC has two private
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://fwd.aws/n4MQ9" target="_blank" rel="noopener">Deploy HITRUST into new VPCs on AWS</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://fwd.aws/n4MQ9?" target="_blank" rel="noopener">Deploy HITRUST into new VPCs on AWS</a></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/aws-quickstart/quickstart-hitrust-csf" target="_blank" rel="noopener">View templates</a></p></td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>Check the AWS Region that&#8217;s displayed in the upper-right corner of the navigation bar, and change it if necessary. This Region is where you build the infrastructure. The template is launched in the us-east-1 Region by default. For more information, see <a href="#_supported_aws_regions">Supported AWS Regions</a> earlier in this guide.</p>
+<p>Check the AWS Region that&#8217;s displayed in the upper-right corner of the navigation bar, and change it if necessary. This Region is where you build the infrastructure. The template launches in the us-east-1 Region by default. For more information, see <a href="#_supported_aws_regions">Supported AWS Regions</a>, earlier in this guide.</p>
 </li>
 <li>
-<p>On the <strong>Create stack</strong> page, keep the default setting for the template URL, and then choose <strong>Next</strong>.</p>
+<p>On the <strong>Create stack</strong> page, keep the default setting for the template URL, then choose <strong>Next</strong>.</p>
 </li>
 <li>
-<p>On the <strong>Specify stack details</strong> page, change the stack name if needed. Review the parameters for the template. Provide values for the parameters that require input. For all other parameters, review the default settings and customize them as necessary. For details on each parameter, see the <a href="#_parameter_reference">Parameter reference</a> section of this guide. When you finish reviewing and customizing the parameters, choose <strong>Next</strong>.</p>
+<p>On the <strong>Specify stack details</strong> page, change the stack name if needed. Review the parameters for the template. Provide values for any parameters that require input. For all other parameters, review the default settings, and customize them as necessary. When you finish reviewing and customizing the parameters, choose <strong>Next</strong>.</p>
 </li>
 <li>
 <p>On the <strong>Configure stack options</strong> page, you can <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html" target="_blank" rel="noopener">specify tags</a> (key-value pairs) for resources in your stack and <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html" target="_blank" rel="noopener">set advanced options</a>. When you finish, choose <strong>Next</strong>.</p>
@@ -1267,7 +1293,7 @@ If you deploy HITRUST into an existing VPC, ensure that your VPC has two private
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Navigate to the landing page. In the <strong>Outputs</strong> tab shown in the previous figure, select LandingPageURL. If you click on the link, the following webpage appears.</p>
+<p>Navigate to the landing page. In the <strong>Outputs</strong> tab shown in the previous figure, choose <strong>LandingPageURL</strong>. The following webpage appears:</p>
 </li>
 </ol>
 </div>
@@ -1280,10 +1306,10 @@ If you deploy HITRUST into an existing VPC, ensure that your VPC has two private
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
-<p>Next, confirm that WordPress is installed correctly. Note down the application URL and navigate to ApplicationURL/wordpress/. Enter the requisite information, if you choose to set up the site.</p>
+<p>Confirm that WordPress is installed correctly. Note the application&#8217;s URL, and navigate to <code>ApplicationURL/wordpress/</code>. If you want to set up the site, enter the requisite information.</p>
 </li>
 <li>
-<p>Navigate to the AWS Config console. Here, you can see the status of your configuration. Note that AWS Config will monitor all resources in the AWS Region you deploy in, not just what is in this particular Quick Start. For example, an Amazon Elastic Block Store (Amazon EBS) volume may not be encrypted elsewhere.</p>
+<p>Navigate to the AWS Config console, where you can see the configuration status. Note that AWS Config monitors all resources in the AWS Region you deploy in, not just what&#8217;s from this deployment. For example, an Amazon Elastic Block Store (Amazon EBS) volume may not be encrypted elsewhere.</p>
 </li>
 </ol>
 </div>
@@ -1296,7 +1322,7 @@ If you deploy HITRUST into an existing VPC, ensure that your VPC has two private
 <div class="olist arabic">
 <ol class="arabic" start="4">
 <li>
-<p>You can also check that all your S3 buckets have public read access disabled.</p>
+<p>Disable read access for your Amazon S3 buckets.</p>
 </li>
 </ol>
 </div>
@@ -1315,7 +1341,7 @@ If you deploy HITRUST into an existing VPC, ensure that your VPC has two private
 <p><strong>Q.</strong> I encountered a <strong>CREATE_FAILED</strong> error when I launched the Quick Start.</p>
 </div>
 <div class="paragraph">
-<p><strong>A.</strong> If AWS CloudFormation fails to create the stack, relaunch the template with <strong>Rollback on failure</strong> set to <strong>Disabled</strong>. This setting is under <strong>Advanced</strong> in the AWS CloudFormation console on the <strong>Configure stack options</strong> page. With this setting, the stack’s state is retained, and the instance keeps running so that you can troubleshoot the issue. (For Windows, look at the log files in <code>%ProgramFiles%\Amazon\EC2ConfigService</code> and <code>C:\cfn\log</code>.)</p>
+<p><strong>A.</strong> If AWS CloudFormation fails to create the stack, relaunch the template with <strong>Rollback on failure</strong> set to <strong>Disabled</strong>. This setting is under <strong>Advanced</strong> in the AWS CloudFormation console on the <strong>Configure stack options</strong> page. With this setting, the stack’s state is retained, and the instance continues running so that you can troubleshoot the issue. (For Windows, review the log files in <code>%ProgramFiles%\Amazon\EC2ConfigService</code> and <code>C:\cfn\log</code>.)</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1324,7 +1350,7 @@ If you deploy HITRUST into an existing VPC, ensure that your VPC has two private
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-When you set <strong>Rollback on failure</strong> to <strong>Disabled</strong>, you continue to incur AWS charges for this stack. Delete the stack when you finish troubleshooting.
+When you set <strong>Rollback on failure</strong> to <strong>Disabled</strong>, you continue to incur AWS charges for the stack. Delete the stack when you finish troubleshooting.
 </td>
 </tr>
 </table>
@@ -1343,15 +1369,15 @@ When you set <strong>Rollback on failure</strong> to <strong>Disabled</strong>, 
 <p><strong>Q.</strong> The DNS validation for the SSL certificate times out.</p>
 </div>
 <div class="paragraph">
-<p><strong>A.</strong> You might encounter this issue if your DNS provider is not Route 53. In this case, you must add DNS records to your DNS registrar for the routing to work. For more information, see the following pages in the AWS documentation:</p>
+<p><strong>A.</strong> You might encounter this issue if your DNS provider is not Amazon Route 53. In this case, you must add DNS records to your DNS registrar for the routing to work. For more information, see the following pages:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">Use DNS to Validate Domain Ownership</a></p>
+<p><a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html" target="_blank" rel="noopener">Use DNS to Validate Domain Ownership</a></p>
 </li>
 <li>
-<p><a href="https://docs.aws.amazon.com/acm/latest/userguide/how-domain-validation-works.html">How Domain Validation Works</a></p>
+<p><a href="https://docs.aws.amazon.com/acm/latest/userguide/how-domain-validation-works.html" target="_blank" rel="noopener">How Domain Validation Works</a></p>
 </li>
 </ul>
 </div>
@@ -1364,10 +1390,10 @@ When you set <strong>Rollback on failure</strong> to <strong>Disabled</strong>, 
 <div class="ulist">
 <ul>
 <li>
-<p>If you already have a wildcard ACM certificate in the AWS Region where you deployed the Quick Start, you can skip the ACM certificate DNS step by supplying the ARN of your pre-existing certificate in the SSLCertificateARN parameter. You can also import certificates in the ACM console and use the ARN of your uploaded certificate.</p>
+<p>If you already have a wildcard ACM certificate in the AWS Region where you deployed the Quick Start, you can skip the ACM certificate DNS step by supplying the ARN of your preexisting certificate in the <code>SSLCertificateARN</code> parameter. You can also import certificates in the ACM console and use the ARN of your uploaded certificate.</p>
 </li>
 <li>
-<p>Alternatively, make sure that DNS validation is working by provisioning certificates outside the Quick Start, following the instructions in the links provided for the previous Q&amp;A. You can use the certificate you created in the SSLCertificateARN parameter to skip the ACM certificate DNS step.</p>
+<p>Alternatively, ensure that DNS validation is working by provisioning certificates outside the Quick Start by following the instructions in the links provided for the previous bullet point. Use the certificate you created in the <code>SSLCertificateARN</code> parameter to skip the ACM certificate DNS step.</p>
 </li>
 </ul>
 </div>
@@ -1378,207 +1404,6 @@ When you set <strong>Rollback on failure</strong> to <strong>Disabled</strong>, 
 <div class="sectionbody">
 <div class="paragraph">
 <p>After you successfully deploy this Quick Start, confirm that your resources and services are updated and configured — including any required patches — to meet your security and other needs. For more information, see the <a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank" rel="noopener">AWS Shared Responsibility Model</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_parameter_reference">Parameter reference</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters labeled <strong>Quick Start S3 bucket name</strong>, <strong>Quick Start S3 bucket Region</strong>, and <strong>Quick Start S3 key prefix</strong>. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the <a href="https://aws-quickstart.github.io/option1.html" target="_blank" rel="noopener">AWS Quick Start Contributor’s Guide</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_parameters_for_deploying_into_new_vpcs">Parameters for deploying into new VPCs</h3>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Network Configuration</caption>
-<colgroup>
-<col style="width: 16%;">
-<col style="width: 11%;">
-<col style="width: 73%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default value</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Availability Zones
-(<code>AvailabilityZones</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List of Availability Zones to use for the subnets in the VPC. You must use two Availabilty Zones. The Quick Start preserves the logical order you specify.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CIDR to access bastion
-(<code>BastionAccessCidr</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address/range to allow access to bastion host from</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Source CIDR for access
-(<code>SourceCidr</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IP address/range to allow access to web app from</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Logging Configuration</caption>
-<colgroup>
-<col style="width: 16%;">
-<col style="width: 11%;">
-<col style="width: 73%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default value</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AWS Config Recorder Name
-(<code>ConfigRecorder</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Blank string</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Config Recorder in your AWS Region. Leaving empty will try to create a new recorder.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AWS Config Delivery Channel Name
-(<code>ConfigDeliveryChannel</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Blank string</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Config Delivery Channel in your AWS Region. Leaving empty will try to create a new recorder. Required if you specify Config Recorder</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Server DNS configuration</caption>
-<colgroup>
-<col style="width: 16%;">
-<col style="width: 11%;">
-<col style="width: 73%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default value</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Full DNS Name for Web App
-(<code>AWSPublicFQDN</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Web app will be reachable at this address.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DNS Zone ID
-(<code>AWSHostedZoneID</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DNS Zone ID to contain the server&#8217;s DNS entry.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SSL Certificate ARN (Requires matching DNS name)
-(<code>SSLCertificateARN</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Blank string</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Amazon Resource Name for the existing SSL cert you wish to use; empty for none. If empty, will create as part of Quick Start</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. Security Configuration</caption>
-<colgroup>
-<col style="width: 16%;">
-<col style="width: 11%;">
-<col style="width: 73%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default value</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Database Password
-(<code>DBPassword</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mixed alphanumeric and must be between 8 and 28 characters and contain at least one capital letter</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bastion key pair
-(<code>BastionKeyPairName</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of an existing EC2 KeyPair to enable SSH access to Bastion Host</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EC2 Key Pair (App)
-(<code>KeyPairName</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong><em>Requires input</em></strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name of an existing EC2 KeyPair to enable SSH access to app servers</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. AWS Quick Start Configuration</caption>
-<colgroup>
-<col style="width: 16%;">
-<col style="width: 11%;">
-<col style="width: 73%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter label (name)</th>
-<th class="tableblock halign-left valign-top">Default value</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quick Start S3 Bucket Name
-(<code>QSS3BucketName</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>aws-quickstart</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">S3 bucket name for the Quick Start assets. Quick Start bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quick Start S3 bucket region
-(<code>QSS3BucketRegion</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>us-east-1</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. When using your own bucket, you must specify this value.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quick Start S3 Key Prefix
-(<code>QSS3KeyPrefix</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>quickstart-hitrust-csf/</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">S3 key prefix for the Quick Start assets. Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), and forward slash (/).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quick Start Tag key
-(<code>QSTagKey</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QuickStartID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag key to identify resources from this Quick Start</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quick Start Tag value
-(<code>QSTagValue</code>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>quickstart-hitrust-csf</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag value to identify resources from this Quick Start</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
@@ -1623,14 +1448,14 @@ and to share your customizations with others.</p>
 </div>
 <p class="footer-text">
 <!-- We can use document attributes: -->
-<!-- Generated with Asciidoctor v2.0.16. -->
+<!-- Generated with Asciidoctor v2.0.17. -->
 <a href="https://aws.amazon.com/privacy/">Privacy</a> | <a href="https://aws.amazon.com/terms/">Site terms</a> | &copy; 2021, Amazon Web Services, Inc. or its affiliates. All rights reserved.
 </p>
 </body>
 </html>
 <!--
 repo commit:
-70fb3864f4388bf1d58d9898a3f4baf2020d8a01
+f5d39b8d1d49c53cb86aca2c3cfe73fac3d26790
 
 submodule config:
  eea042d0b9c005d2549a71349e5f28b02c81af75 docs/boilerplate (remotes/origin/cdk-13-geea042d)
